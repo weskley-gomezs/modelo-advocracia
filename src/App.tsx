@@ -64,7 +64,7 @@ const SectionHeading = ({ title, subtitle, light = false }: { title: string, sub
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      className="text-gold font-serif italic text-lg mb-2 block"
+      className={`${light ? 'text-night/80' : 'text-gold'} font-serif italic text-lg mb-2 block`}
     >
       {subtitle}
     </motion.span>
@@ -76,7 +76,7 @@ const SectionHeading = ({ title, subtitle, light = false }: { title: string, sub
     >
       {title}
     </motion.h2>
-    <div className="w-20 h-1 bg-gold mt-4"></div>
+    <div className={`w-20 h-1 ${light ? 'bg-night/30' : 'bg-gold'} mt-4`}></div>
   </div>
 );
 
@@ -240,8 +240,9 @@ export default function App() {
       </section>
 
       {/* Sobre Section */}
-      <section id="sobre" className="py-24 md:py-32 bg-gold/5">
-        <div className="container mx-auto px-6">
+      <section id="sobre" className="py-24 md:py-32 bg-gold text-night relative overflow-hidden">
+        <div className="absolute inset-0 grain-bg opacity-10 pointer-events-none"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -249,7 +250,7 @@ export default function App() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-[4/5] bg-gold/5 asymmetric-border overflow-hidden relative">
+              <div className="aspect-[4/5] bg-night/5 asymmetric-border overflow-hidden relative">
                 <img 
                   src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoeA4kNcDGueTsVJg6djn4dR_7kOot8DUesSVytf1PA-7N2ko3dDxxM0P04xCWUA5hYKdAH2cWzRN0kXwnsT3FyZVaL4p_F8lyIFN1Tj61M8px6BDLxkZtmVHHCN4u71AJmdTMQVg=s680-w680-h510-rw" 
                   alt="João Nogueira - JN Advocacia" 
@@ -257,9 +258,9 @@ export default function App() {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="absolute -bottom-8 -right-8 bg-gold p-8 asymmetric-border hidden md:block z-10 shadow-2xl">
-                <MapPin size={32} className="text-night mb-4" />
-                <p className="text-night font-serif text-xl leading-tight">
+              <div className="absolute -bottom-8 -right-8 bg-night p-8 asymmetric-border hidden md:block z-10 shadow-2xl">
+                <MapPin size={32} className="text-gold mb-4" />
+                <p className="text-gold font-serif text-xl leading-tight">
                   João Pessoa <br /> Paraíba
                 </p>
               </div>
@@ -269,8 +270,9 @@ export default function App() {
               <SectionHeading 
                 title="Excelência Jurídica com Identidade Nordestina" 
                 subtitle="Sobre o Escritório" 
+                light={true}
               />
-              <p className="text-lg text-off-white/70 mb-12 leading-relaxed">
+              <p className="text-lg text-night/70 mb-12 leading-relaxed">
                 O JN Advocacia nasceu com o propósito de humanizar o atendimento jurídico, aliando a seriedade necessária à proximidade com o cliente. Localizado no coração de João Pessoa, somos referência em soluções estratégicas para conflitos complexos.
               </p>
 
@@ -286,11 +288,11 @@ export default function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="p-6 border border-gold/10 bg-gold/5 rounded-sm"
+                    className="p-6 border border-night/10 bg-night/5 rounded-sm"
                   >
-                    <item.icon className="text-gold mb-4" size={28} />
-                    <h4 className="font-serif text-xl mb-2">{item.title}</h4>
-                    <p className="text-sm text-off-white/50">{item.desc}</p>
+                    <item.icon className="text-night mb-4" size={28} />
+                    <h4 className="font-serif text-xl mb-2 text-night">{item.title}</h4>
+                    <p className="text-sm text-night/50">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -500,15 +502,16 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-20 border-t border-gold/10">
-        <div className="container mx-auto px-6">
+      <footer className="py-20 bg-gold text-night relative overflow-hidden">
+        <div className="absolute inset-0 grain-bg opacity-10 pointer-events-none"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div className="lg:col-span-1">
               <a href="#" className="flex items-center gap-2 mb-8">
-                <span className="text-3xl font-serif font-bold text-gold">JN</span>
-                <span className="text-xl font-serif tracking-widest uppercase">Advocacia</span>
+                <span className="text-3xl font-serif font-bold text-night">JN</span>
+                <span className="text-xl font-serif tracking-widest uppercase text-night">Advocacia</span>
               </a>
-              <p className="text-off-white/50 leading-relaxed mb-8">
+              <p className="text-night/60 leading-relaxed mb-8">
                 Justiça, ética e resultados em João Pessoa. Especialistas em defesa do consumidor e bancário.
               </p>
               <div className="flex gap-4">
@@ -516,7 +519,7 @@ export default function App() {
                   href="https://www.instagram.com/jnadvocacia__/" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="w-10 h-10 border border-gold/20 rounded-full flex items-center justify-center text-gold hover:bg-gold hover:text-night transition-all"
+                  className="w-10 h-10 border border-night/20 rounded-full flex items-center justify-center text-night hover:bg-night hover:text-gold transition-all"
                 >
                   <Instagram size={20} />
                 </a>
@@ -524,7 +527,7 @@ export default function App() {
                   href="https://www.facebook.com/joaonogueiraadvocacia" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="w-10 h-10 border border-gold/20 rounded-full flex items-center justify-center text-gold hover:bg-gold hover:text-night transition-all"
+                  className="w-10 h-10 border border-night/20 rounded-full flex items-center justify-center text-night hover:bg-night hover:text-gold transition-all"
                 >
                   <Facebook size={20} />
                 </a>
@@ -532,17 +535,17 @@ export default function App() {
             </div>
 
             <div>
-              <h4 className="font-serif text-xl mb-8 text-gold">Localização</h4>
-              <div className="flex gap-4 text-off-white/60 leading-relaxed">
-                <MapPin className="shrink-0 text-gold" size={20} />
+              <h4 className="font-serif text-xl mb-8 text-night">Localização</h4>
+              <div className="flex gap-4 text-night/60 leading-relaxed">
+                <MapPin className="shrink-0 text-night/40" size={20} />
                 <p>Av. Amazonas, 290 - Estados <br /> João Pessoa - PB, 58030-140</p>
               </div>
             </div>
 
             <div>
-              <h4 className="font-serif text-xl mb-8 text-gold">Horário</h4>
-              <div className="flex gap-4 text-off-white/60 leading-relaxed">
-                <Clock className="shrink-0 text-gold" size={20} />
+              <h4 className="font-serif text-xl mb-8 text-night">Horário</h4>
+              <div className="flex gap-4 text-night/60 leading-relaxed">
+                <Clock className="shrink-0 text-night/40" size={20} />
                 <div>
                   <p>Seg – Sex: 09h às 21h</p>
                   <p>Sábado: 09h às 18h</p>
@@ -551,26 +554,26 @@ export default function App() {
             </div>
 
             <div>
-              <h4 className="font-serif text-xl mb-8 text-gold">Contato</h4>
-              <div className="flex gap-4 text-off-white/60 leading-relaxed mb-4">
-                <MessageCircle className="shrink-0 text-gold" size={20} />
+              <h4 className="font-serif text-xl mb-8 text-night">Contato</h4>
+              <div className="flex gap-4 text-night/60 leading-relaxed mb-4">
+                <MessageCircle className="shrink-0 text-night/40" size={20} />
                 <p>(83) 98708-9929</p>
               </div>
               <a 
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-gold/10 text-gold border border-gold/20 px-6 py-3 rounded-sm text-sm font-medium hover:bg-gold/20 transition-all block text-center"
+                className="bg-night text-gold px-6 py-3 rounded-sm text-sm font-bold hover:bg-night/90 transition-all block text-center uppercase tracking-widest"
               >
                 Iniciar Conversa
               </a>
             </div>
           </div>
 
-          <div className="pt-8 border-t border-gold/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-off-white/30">
+          <div className="pt-8 border-t border-night/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-night/30">
             <p>© 2026 JN Advocacia — Todos os direitos reservados</p>
             <div className="flex gap-8">
-              <p>Feito por <a href="https://wa.me/5561981535040" target="_blank" rel="noreferrer" className="hover:text-gold transition-colors">Weskley Gomes</a></p>
+              <p>Feito por <a href="https://wa.me/5561981535040" target="_blank" rel="noreferrer" className="hover:text-night transition-colors">Weskley Gomes</a></p>
             </div>
           </div>
         </div>
