@@ -4,9 +4,9 @@
 @theme {
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Source Serif 4", serif;
-  --color-gold: #132658;
-  --color-night: #FFFFFF;
-  --color-off-white: #000000;
+  --color-gold: #FFD700;
+  --color-night: #132658;
+  --color-off-white: #F8F8F8;
 }
 
 @layer base {

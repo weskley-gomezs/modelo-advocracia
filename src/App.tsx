@@ -22,7 +22,7 @@ import {
   Building2
 } from 'lucide-react';
 
-const WHATSAPP_URL = "https://wa.me/5583987089929";
+const WHATSAPP_URL = "https://wa.me/5561981535040";
 
 const MENU_ITEMS = [
   { label: 'Sobre', id: 'sobre' },
@@ -100,7 +100,7 @@ export default function App() {
         <div className={`container mx-auto max-w-6xl pointer-events-auto transition-all duration-700 ${scrolled ? 'translate-y-0' : 'translate-y-2'}`}>
           <div className={`flex justify-between items-center px-6 py-3 rounded-full border transition-all duration-500 ${scrolled ? 'bg-night/80 backdrop-blur-xl border-gold/20 shadow-2xl' : 'bg-night/20 backdrop-blur-sm border-gold/10'}`}>
             <a href="#" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 bg-gold rounded-full flex items-center justify-center text-night font-serif font-bold text-xl transition-transform group-hover:rotate-12">JN</div>
+              <div className="w-10 h-10 bg-gold rounded-full flex items-center justify-center text-night font-serif font-bold text-xl transition-transform group-hover:rotate-12">MA</div>
               <span className="text-lg font-serif tracking-widest uppercase hidden sm:block">Advocacia</span>
             </a>
 
@@ -205,7 +205,7 @@ export default function App() {
               
               <p className="text-xl md:text-2xl text-off-white/70 mb-10 max-w-2xl leading-relaxed">
                 Especialistas em <span className="text-off-white font-medium">Direito do Consumidor</span> e <span className="text-off-white font-medium">Direito Bancário</span>. 
-                Justiça e autoridade jurídica em João Pessoa, Paraíba.
+                Justiça e autoridade jurídica em Brasília, DF.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -252,8 +252,8 @@ export default function App() {
             >
               <div className="aspect-[4/5] bg-night/5 asymmetric-border overflow-hidden relative">
                 <img 
-                  src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoeA4kNcDGueTsVJg6djn4dR_7kOot8DUesSVytf1PA-7N2ko3dDxxM0P04xCWUA5hYKdAH2cWzRN0kXwnsT3FyZVaL4p_F8lyIFN1Tj61M8px6BDLxkZtmVHHCN4u71AJmdTMQVg=s680-w680-h510-rw" 
-                  alt="João Nogueira - JN Advocacia" 
+                  src="https://images.jota.info/wp-content/uploads/2025/01/advocacia.jpg" 
+                  alt="Modelo Advocacia" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -261,7 +261,7 @@ export default function App() {
               <div className="absolute -bottom-8 -right-8 bg-night p-8 asymmetric-border hidden md:block z-10 shadow-2xl">
                 <MapPin size={32} className="text-gold mb-4" />
                 <p className="text-gold font-serif text-xl leading-tight">
-                  João Pessoa <br /> Paraíba
+                  Brasília <br /> DF
                 </p>
               </div>
             </motion.div>
@@ -273,7 +273,7 @@ export default function App() {
                 light={true}
               />
               <p className="text-lg text-night/70 mb-12 leading-relaxed">
-                O JN Advocacia nasceu com o propósito de humanizar o atendimento jurídico, aliando a seriedade necessária à proximidade com o cliente. Localizado no coração de João Pessoa, somos referência em soluções estratégicas para conflitos complexos.
+                O Modelo Advocacia nasceu com o propósito de humanizar o atendimento jurídico, aliando a seriedade necessária à proximidade com o cliente. Localizado no coração de Brasília, somos referência em soluções estratégicas para conflitos complexos.
               </p>
 
               <div className="grid sm:grid-cols-3 gap-6">
@@ -428,7 +428,7 @@ export default function App() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { text: "Resultados eficientes com excelência na prestação do serviço. Recomendo fortemente o JN Advocacia.", author: "Maria Silva" },
+              { text: "Resultados eficientes com excelência na prestação do serviço. Recomendo fortemente o Modelo Advocacia.", author: "Maria Silva" },
               { text: "Melhor experiência, obrigada por toda assistência com o meu caso. Profissionais humanos e competentes.", author: "João Oliveira" },
               { text: "Atendimento impecável do início ao fim. Resolveram meu problema com o banco de forma muito rápida.", author: "Ricardo Santos" }
             ].map((item, i) => (
@@ -458,7 +458,7 @@ export default function App() {
           
           <div className="mt-16 text-center">
             <a 
-              href="https://www.google.com/search?q=JN+Advocacia+Joao+Pessoa" 
+              href="https://www.google.com/search?q=Modelo+Advocacia+Brasilia" 
               target="_blank" 
               rel="noreferrer"
               className="text-gold border-b border-gold/30 pb-1 hover:border-gold transition-all"
@@ -495,7 +495,7 @@ export default function App() {
                 <MessageCircle size={24} />
                 Falar no WhatsApp
               </a>
-              <p className="mt-6 font-medium">(83) 98708-9929</p>
+              <p className="mt-6 font-medium">(99) 9999-9999</p>
             </div>
           </motion.div>
         </div>
@@ -508,37 +508,19 @@ export default function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div className="lg:col-span-1">
               <a href="#" className="flex items-center gap-2 mb-8">
-                <span className="text-3xl font-serif font-bold text-night">JN</span>
+                <span className="text-3xl font-serif font-bold text-night">MA</span>
                 <span className="text-xl font-serif tracking-widest uppercase text-night">Advocacia</span>
               </a>
               <p className="text-night/60 leading-relaxed mb-8">
-                Justiça, ética e resultados em João Pessoa. Especialistas em defesa do consumidor e bancário.
+                Justiça, ética e resultados em Brasília. Especialistas em defesa do consumidor e bancário.
               </p>
-              <div className="flex gap-4">
-                <a 
-                  href="https://www.instagram.com/jnadvocacia__/" 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className="w-10 h-10 border border-night/20 rounded-full flex items-center justify-center text-night hover:bg-night hover:text-gold transition-all"
-                >
-                  <Instagram size={20} />
-                </a>
-                <a 
-                  href="https://www.facebook.com/joaonogueiraadvocacia" 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className="w-10 h-10 border border-night/20 rounded-full flex items-center justify-center text-night hover:bg-night hover:text-gold transition-all"
-                >
-                  <Facebook size={20} />
-                </a>
-              </div>
             </div>
 
             <div>
               <h4 className="font-serif text-xl mb-8 text-night">Localização</h4>
               <div className="flex gap-4 text-night/60 leading-relaxed">
                 <MapPin className="shrink-0 text-night/40" size={20} />
-                <p>Av. Amazonas, 290 - Estados <br /> João Pessoa - PB, 58030-140</p>
+                <p>Brasília - DF</p>
               </div>
             </div>
 
@@ -557,7 +539,7 @@ export default function App() {
               <h4 className="font-serif text-xl mb-8 text-night">Contato</h4>
               <div className="flex gap-4 text-night/60 leading-relaxed mb-4">
                 <MessageCircle className="shrink-0 text-night/40" size={20} />
-                <p>(83) 98708-9929</p>
+                <p>(99) 9999-9999</p>
               </div>
               <a 
                 href={WHATSAPP_URL}
@@ -571,7 +553,7 @@ export default function App() {
           </div>
 
           <div className="pt-8 border-t border-night/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-night/30">
-            <p>© 2026 JN Advocacia — Todos os direitos reservados</p>
+            <p>© 2026 Modelo Advocacia — Todos os direitos reservados</p>
             <div className="flex gap-8">
               <p>Feito por <a href="https://wa.me/5561981535040" target="_blank" rel="noreferrer" className="hover:text-night transition-colors">Weskley Gomes</a></p>
             </div>
